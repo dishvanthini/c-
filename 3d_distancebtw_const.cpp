@@ -14,7 +14,7 @@ class point{
 			
 		}
 		void display(){
-			cout<<"L: "<<x<<endl<<"M :"<<y<<endl<<"N"<<z<<endl;
+			cout<<endl<<"L: "<<x<<endl<<"M :"<<y<<endl<<"N :"<<z<<endl;
 			
 			
 		}
@@ -38,7 +38,7 @@ int main(){
 	p.distance( p, q);
 	//point::distance( p, q);//class_name(:: -> scope )
 	
-	q.distance(p,q);
+	//q.distance(p,q);
 	//int d=sqrt(pow((p.x-q.x),2)+pow((p.x+p.y),2));
 	
 	
