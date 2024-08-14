@@ -19,18 +19,18 @@ class point{
 		}
 		float distance(point p,point q){
 			
-			float d=sqrt(pow((p.x-q.x),2)+pow((p.x+p.y),2)); //math header file 
+			float d=sqrt(pow((p.x-q.x),2)+pow((p.y-q.y),2)); //math header file 
 			cout<<endl<<"distance : "<<d<<'\n';
 			return d;
 		}
 };
 
 int main(){
-	point p(7,3);
+	point p(2,3);
 	p.display();
 	
 	
-	point q(8,5);
+	point q(4,5);
 	q.display();
 	
 	p.distance( p, q);
