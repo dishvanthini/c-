@@ -6,7 +6,7 @@ class interest{
 	public:	
 	float x,y,z,ci;	
 	void user_input();
-	void calculate();//declarating method
+	void calculate();	//declarating method
 	
 	interest(float  p, float t, float r)
 	{
@@ -21,13 +21,10 @@ class interest{
 		z=15;
 	cout<<"principle value "<<x<<endl<<"years "<<y<<endl<<"rate "<<z<<endl;
 	}	
-	*/
-	
-	
-	
+	*/	
 };
 
-void interest::user_input(){// declaaring method belongs to class 
+void interest::user_input(){// declaring method belongs to class 
 		
 	
 	cout<<"enter P T R values"<<endl;
@@ -36,7 +33,7 @@ void interest::user_input(){// declaaring method belongs to class
 
 	}
 	
-void interest::calculate(){
+void interest::calculate(){	//void_class-name_scope(::)_fun-name()
 		
 		float i=pow((1+(z/100)),y);
 		float ci=((x*i)-x);
@@ -54,6 +51,7 @@ int main(){
 	
 	//cout<<"enter P T R values"<<endl;
 	//cin>>x1>>y1>>z1;
+	//	x.change_attributes();
 	interest x(x1,y1,z1);
 	x.user_input();
 	x.calculate();
@@ -62,11 +60,6 @@ int main(){
 	interest y(x1,y1,z1);
 	y.user_input();
 	y.calculate();
-	
-//	x.change_attributes();
-	
-
-
 	return 0;
 	
 	
