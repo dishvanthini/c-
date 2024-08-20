@@ -6,11 +6,11 @@ class pupil{
 	public:
 		int i;
 	void id(){
-		cout<<"enter id."<<endl;
+		cout<<"Enter ID :";
 		cin>>i;
 	}
 	void print_id(){
-		cout<<"the id"<<i<<endl;	
+		cout<<endl<<"The ID :"<<i<<endl;	
 	}
 
 
@@ -21,14 +21,13 @@ class academic: virtual public pupil{
 	int m;
 	
 	public:
-	print_id();
 	void mark(){
 		
-		cout<<"enter total mark academic."<<endl;
+		cout<<"Enter total mark academic :";
 		cin>>m;
 	}
 	void print_mark(){ 
-		cout<<"the total mark in academic."<<m<<endl;
+		cout<<"The total mark in academic :"<<m<<endl;
 		
 	}
 };
@@ -38,11 +37,11 @@ class sports:virtual public pupil{
 	int s;
 	public:
 	void score(){
-		cout<<"enter total score sports."<<endl;
+		cout<<"Enter total score sports :";
 		cin>>s;
 	}
 	void print_score(){
-		cout<<"the sports scored"<<s<<endl;
+		cout<<"The sports scored :"<<s<<endl;
 		
 	}
 };
@@ -51,13 +50,13 @@ class report : public academic,public sports
 {
 	
 public:
-	int t=m+s;
+	
 	void display_score(){
-		
+	int t=m+s;
 		print_mark();
 		print_score();
 		
-		cout<<"the total score "<<t<<endl;
+		cout<<"The total score : "<<t<<endl;
 		
         
 	}
@@ -76,10 +75,11 @@ int main()
 	*/
 	
 	report d;
-	d.print_id();
+	
 	d.id();
 	d.mark();
 	d.score();
+	d.print_id();
 	d.display_score();//total
 	return 0;
 }
