@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int* v()
+{ static int a=100;
+    return &a;//cant access a when its local variable 
+}
+
+int* dma(){  //returning int 
+    int* a=malloc(4);///one element
+    *a=9;
+    return a;
+}
+
+
+int main()
+{
+    int result;
+    int (*ptr)(int, int) ;
+    ptr =&add; 
+    //result = ptr(10, 20);  printf("%d\n",result);   
+    //printf("%d", ptr(10,20));
+    // int *n=v();
+    int *n=dma();//pointer to int 
+    printf("%d",*n);
+    
+    free(n);
+    return 0;
+}
