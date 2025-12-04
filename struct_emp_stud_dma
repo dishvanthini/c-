@@ -1,0 +1,53 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+  struct student{
+       int eng;
+       int maths;
+   };
+   
+    struct emp{
+       int id;
+       int sal;
+   };
+int main() {
+ int n;
+    //int*eng=malloc(n*4);
+    struct student *s1=malloc(2*sizeof(struct student));
+    struct student *s2=malloc(2*sizeof(struct student));
+   ((int*)s1)[0]=89;
+   ((int*)s1)[1]=90; 
+   ((int*)s2)[0]=99;
+   ((int*)s2)[1]=70;
+    printf("s1 eng %d\n",s1->eng);
+    printf("s2 eng %d\n",s2->eng);
+
+    printf("s1 math %d\n",s1->maths);  
+    printf("s2 math %d\n",s2->maths);
+
+    
+      
+    printf("\nenter no of employee:");
+    scanf("%d",&n);
+    struct emp *e=malloc(n*sizeof(struct emp));
+    printf("enter emp details....\n");
+    for (int i=0;i<n;i++){
+        printf("\nenter emp %d id:",i+1);
+        scanf("%d",&(e[i].id));
+        printf("enter emp %d sal:",i+1);
+        scanf("%d",&(e[i].sal));
+    }
+      printf("\nemp details....\n");
+    for (int i=0;i<n;i++){
+        printf("enter emp %d id:",i+1);
+        printf("%d\n",e[i].id);
+        printf("enter emp %d sal:",i+1);
+        printf("%d\n",e[i].sal);
+    }
+
+    
+    
+    
+     
+    return 0;
+}
