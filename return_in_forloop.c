@@ -9,5 +9,5 @@ int main() {
             return 0;   // ends main and program
     }
 
-    printf("I will never run!");
+    printf("I will never run!");/////////////✔ The function ends immediately
 }
